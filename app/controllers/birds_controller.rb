@@ -16,4 +16,10 @@ class BirdsController < ApplicationController
     end
   end
 
+  # POST /birds
+  def create
+    req_body = JSON.parse(request.body.read)
+    render text: params
+  end
+
 end
